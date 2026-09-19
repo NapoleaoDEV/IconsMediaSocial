@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Icones de Redes Sociais e Profissionais </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+       
+       body{
+         background-color: #222222;
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         font: normal 22px Arial;
+       }
+      .social-container{
+        display: flex;
+        gap: 25px;
+      }
+      .social-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        background-color: #e4e2e2;
+        border-radius: 50%;
+        text-decoration: none;
+        color: #333333;
+        font-size: 30px;
+        transition: all 0.3 ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+      .social-btn:hover{
+        transform: translateY(-5px);
+        color: #ffffff;
+      }
+      .social-btn:active{
+        transform: scale(0.9);
+      }
+      .social-btn.linkedin:hover{
+        background-color: #0077b5;
+      }
+      .social-btn.instagram:hover{
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+      }      
+      .social-btn.github:hover{
+        background-color: #000000;
+      }
+    </style>
+</head>
+<body>
+    <div class="social-container">
+        <a href="https://www.linkedin.com/in/lucas-napole%C3%A3o-2b2179349/" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/nl.s4ntos/" target="_blank" class="social-btn instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/NapoleaoDEV" target="_blank" class="social-btn github" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const socialButtons = document.querySelectorAll('.social-btn');
+
+            socialButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const redes = button.classList[1];
+                    console.log("Abrindo o perfil do " + redes + ".");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
